@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ErrandsActivity"
+            android:label="@string/title_activity_errands" >
+        </activity>
+        <activity
+            android:name=".CreateErrandActivity"
+            android:label="@string/title_activity_create_errand" >
+        </activity>
     </application>
 
 </manifest>

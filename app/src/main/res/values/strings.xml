@@ -2,4 +2,6 @@
     <string name="app_name">Tindeed</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_errands">ErrandsActivity</string>
+    <string name="title_activity_create_errand">CreateErrandActivity</string>
 </resources>
