@@ -19,7 +19,7 @@ import android.util.Log;
 import com.ibm.mobile.services.core.IBMBluemix;
 import com.ibm.mobile.services.data.IBMData;
 import com.tindeed.bluemix.Errand;
-
+import com.tindeed.bluemix.Chores;
 public final class RoomieMagicApplication extends Application {
     private static final String APP_ID = "applicationID";
     private static final String APP_SECRET = "applicationSecret";
@@ -29,7 +29,7 @@ public final class RoomieMagicApplication extends Application {
     private static final String CLASS_NAME = RoomieMagicApplication.class
             .getSimpleName();
     List<Errand> itemList;
-
+    List<Chores> itemList2;
     public RoomieMagicApplication() {
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
@@ -83,6 +83,7 @@ public final class RoomieMagicApplication extends Application {
     public void onCreate() {
         super.onCreate();
         itemList = new ArrayList<Errand>();
+        itemList2 = new ArrayList<Chores>();
         // Read from properties file.
         Properties props = new java.util.Properties();
         Context context = getApplicationContext();
@@ -102,6 +103,7 @@ public final class RoomieMagicApplication extends Application {
         IBMData.initializeService();
         // Register the Item Specialization.
         Errand.registerSpecialization(Errand.class);
+        Chores.registerSpecialization(Chores.class);
     }
 
     /**
@@ -112,4 +114,5 @@ public final class RoomieMagicApplication extends Application {
     public List<Errand> getItemList() {
         return itemList;
     }
+    public List<Chores> getItemList2() { return itemList2;}
 }

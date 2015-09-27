@@ -6,13 +6,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -39,8 +42,9 @@ public class Errandslist extends AppCompatActivity {
     ArrayAdapter<Errand> lvArrayAdapter;
     ActionMode mActionMode = null;
     int listItemPosition;
-    public static final String CLASS_NAME = "MainActivity";
-
+    public static final String CLASS_NAME = "Errandslist";
+    private ListView errandsList;
+    private Button createErrand;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +91,23 @@ public class Errandslist extends AppCompatActivity {
         });
     }
 
+
+   /* public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_errands, container, false);
+        errandsList = (ListView) view.findViewById(R.id.errandsList);
+        createErrand = (Button) view.findViewById(R.id.createErrand);
+
+        createErrand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), CreateErrandslist.class);
+                startActivity(intent);
+            }
+        });
+        new RefreshErrandsListTask().execute();
+        return view;
+    }*/
 
     /**
      * Removes text on click of x button.
@@ -233,12 +254,12 @@ public class Errandslist extends AppCompatActivity {
      *
      * @parm String name - name of the item.
      */
-  /*  public void updateItem(String name) {
-        Intent editIntent = new Intent(getBaseContext(), EditActivity.class);
+    public void updateItem(String name) {
+        Intent editIntent = new Intent(getBaseContext(), EditErrandActivity.class);
         editIntent.putExtra("ItemText", name);
         editIntent.putExtra("ItemLocation", listItemPosition);
         startActivityForResult(editIntent, RoomieMagicApplication.EDIT_ACTIVITY_RC);
-    }*/
+    }
 
     /**
      * Sort a list of Items.

@@ -6,4 +6,6 @@
     <string name="title_activity_create_errand">CreateErrandActivity</string>
     <string name="title_activity_show_chores">ShowChores</string>
     <string name="title_activity_create_chores">CreateChoresActivity</string>
+    <string name="title_activity_errandslist">CreateErrandlist</string>
+    <string name="title_activity_choreslist">CreateChorelist</string>
 </resources>

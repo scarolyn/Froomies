@@ -18,9 +18,9 @@ package com.tindeed.bluemix;
 import com.ibm.mobile.services.data.IBMDataObject;
 import com.ibm.mobile.services.data.IBMDataObjectSpecialization;
 
-@IBMDataObjectSpecialization("Item")
+@IBMDataObjectSpecialization("Errand")
 public class Errand extends IBMDataObject {
-    public static final String CLASS_NAME = "Item";
+    public static final String CLASS_NAME = "Errand";
     private static final String NAME = "name";
     private static final String MICHAEL = "420";
 

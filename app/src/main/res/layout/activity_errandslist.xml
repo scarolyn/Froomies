@@ -48,8 +48,8 @@ tools:context=".Errandslist" >
     android:id="@+id/titleText"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="title_text"
-    android:textColor="@android:color/black"
+    android:text="List"
+    android:textColor="#FF33B5E5"
     android:fontFamily='Roboto'
     android:textStyle='bold'
     android:textAllCaps="true"
@@ -62,7 +62,7 @@ tools:context=".Errandslist" >
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_weight="1"
-    android:background="@android:color/white"
+    android:background="#6BCAE2"
 />
 
 </LinearLayout>

@@ -19,9 +19,6 @@ import java.util.ArrayList;
  */
 public class MainActivityFragment extends Fragment {
 
-    // api call to bluemix to fill the listview
-    private ListView activityList;
-
     private Button toErrands;
     private Button chores;
 
@@ -33,40 +30,23 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-        activityList = (ListView)view.findViewById(R.id.listView);
         toErrands = (Button) view.findViewById(R.id.errandsButton);
         toErrands.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ErrandsActivity.class);
+                Intent intent = new Intent(getContext(), Errandslist.class);
                 startActivity(intent);
             }
         });
         chores = (Button) view.findViewById(R.id.choresButton);
-
-        new RefreshListTask().execute();
-
+        chores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Choreslist.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
-    }
-
-    public Context getContext() {
-        return getActivity();
-    }
-
-    private class RefreshListTask extends AsyncTask<Void, Void, String[]> {
-
-        @Override
-        protected String[] doInBackground(Void... params) {
-            String[] list = {"I hate you"};
-            return list;
-        }
-
-        @Override
-        protected void onPostExecute(String[] result) {
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, result);
-            activityList.setAdapter(adapter);
-
-        }
     }
 }
