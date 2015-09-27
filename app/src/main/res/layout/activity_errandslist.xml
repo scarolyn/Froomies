@@ -1,0 +1,68 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Errandslist" >
+
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+
+    <EditText
+        android:id="@+id/itemToAdd"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:hint="item_to_buy"
+        android:ems="10"
+        android:background="@android:color/white"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="55dp"
+    />
+    <Button
+        android:id="@+id/clearText"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:onClick="clearText"
+    />
+    <Button
+        android:id="@+id/acceptText"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="createItem"
+        android:layout_marginLeft="10dp"
+    />
+</RelativeLayout>
+<TextView
+    android:id="@+id/titleText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="title_text"
+    android:textColor="@android:color/black"
+    android:fontFamily='Roboto'
+    android:textStyle='bold'
+    android:textAllCaps="true"
+    android:textSize="28sp"
+    android:padding="10dp"
+
+/>
+<ListView
+    android:id="@+id/itemsList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@android:color/white"
+/>
+
+</LinearLayout>
