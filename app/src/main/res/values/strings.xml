@@ -4,4 +4,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_errands">ErrandsActivity</string>
     <string name="title_activity_create_errand">CreateErrandActivity</string>
+    <string name="title_activity_show_chores">ShowChores</string>
+    <string name="title_activity_create_chores">CreateChoresActivity</string>
 </resources>

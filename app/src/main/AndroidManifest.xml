@@ -24,6 +24,14 @@
             android:name=".CreateErrandActivity"
             android:label="@string/title_activity_create_errand" >
         </activity>
+        <activity
+            android:name=".ShowChoresActivity"
+            android:label="@string/title_activity_show_chores" >
+        </activity>
+        <activity
+            android:name=".CreateChoresActivity"
+            android:label="@string/title_activity_create_chores" >
+        </activity>
     </application>
 
 </manifest>
