@@ -90,9 +90,12 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="MPAndroidChart-v2.1.4" level="project" />
+    <orderEntry type="library" exported="" name="ibmfilesync-1.0.1.20150311-1224" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.0" level="project" />
+    <orderEntry type="library" exported="" name="ibmdata-1.0.1.20150311-1224" level="project" />
+    <orderEntry type="library" exported="" name="MPAndroidChart-v2.1.4" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.0" level="project" />
+    <orderEntry type="library" exported="" name="ibmbluemix-1.0.1.20150311-1224" level="project" />
   </component>
 </module>
